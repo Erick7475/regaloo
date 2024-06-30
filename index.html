@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un Mensaje Especial para Mi Novia</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #eaa5ff, #cc00ff); /* Fondo con degradado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px; /* Ancho máximo del contenedor principal */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Cuadro con fondo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(234, 0, 255);
+  }
+  .message-box {
+    text-align: center;
+    margin-top: 20px; /* Espacio entre el cuadro de mensaje y los GIF */
+  }
+  .gif-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px; /* Espacio entre los GIF y el cuadro de mensaje */
+  }
+  .gif {
+    width: 100px; /* Ancho del GIF */
+    height: 100px; /* Altura del GIF */
+    border-radius: 50%; /* Forma redonda */
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="gif-container">
+      <div class="tenor-gif-embed" data-postid="17594547589100812817" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/hello-kitty-gif-17594547589100812817">Hello Kitty GIF</a> from <a href="https://tenor.com/search/hello+kitty-gifs">Hello Kitty GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      <div class="message-box" id="message">
+        <h1>¡Hola linda!</h1>
+      </div>
+      <div class="tenor-gif-embed" data-postid="17594547589100812817" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/hello-kitty-gif-17594547589100812817">Hello Kitty GIF</a> from <a href="https://tenor.com/search/hello+kitty-gifs">Hello Kitty GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const messages = [
+        "se que eres capaz de lograr todo lo que quiras",
+        "asi que no te desanimes ni te estreses por algo que tiene solucion 💞",
+        "Te amo más de lo que las palabras pueden expresar ❤",
+        "¡asi que animo corazon tu puedes💗!"
+      ];
+
+      const messageBox = document.getElementById('message');
+      let index = 0;
+
+      function showNextMessage() {
+        messageBox.innerHTML = `<h1>${messages[index]}</h1>`;
+        index = (index + 1) % messages.length; // Ciclo infinito de mensajes
+        setTimeout(showNextMessage, 5000); // Tiempo que se muestra cada mensaje (en milisegundos)
+      }
+
+      showNextMessage();
+    });
+  </script>
+</body>
+</html>
